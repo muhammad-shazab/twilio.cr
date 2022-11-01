@@ -1,9 +1,9 @@
 module Twilio
   class Mapping
     class Messages
-      JSON.mapping(
-        sid: String
-      )
+      include JSON::Serializable
+
+      property sid : String
     end
   end
 end
